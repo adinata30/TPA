@@ -1,0 +1,15 @@
+﻿<Window x:Class="UnderTheSea.View.SalesAndAdvertisement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UnderTheSea.View"
+        mc:Ignorable="d"
+        Title="SalesAndAdvertisement" >
+    <Grid>
+        <Button x:Name="manageAdvertisement" Content="Manage Advertisement" HorizontalAlignment="Left" Margin="265,62,0,0" VerticalAlignment="Top" Width="214" FontSize="20" Click="manageAdvertisement_Click"/>
+        <Button x:Name="sendPurchaseBtn" Content="Send Purchase Request" HorizontalAlignment="Left" Margin="265,182,0,0" VerticalAlignment="Top" Width="214" FontSize="20"/>
+        <Button x:Name="sendFundBtn" Content="Send Fund Request" HorizontalAlignment="Left" Margin="265,277,0,0" VerticalAlignment="Top" Width="214" FontSize="20"/>
+
+    </Grid>
+</Window>

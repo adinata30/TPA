@@ -1,0 +1,19 @@
+﻿<Window x:Class="UnderTheSea.View.AddAdvertisement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UnderTheSea.View"
+        mc:Ignorable="d"
+        Title="AddAdvertisement" Loaded="Window_Loaded" >
+    <Grid>
+        <Label x:Name="label" Content="Advertisement ID : " HorizontalAlignment="Left" Margin="46,77,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="label_Copy" Content="Advertisement Name : " HorizontalAlignment="Left" Margin="46,191,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="label_Copy1" Content="Advertisement Description : " HorizontalAlignment="Left" Margin="46,301,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <TextBox x:Name="nameBox" HorizontalAlignment="Left" Height="35" Margin="520,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontSize="20"/>
+        <TextBox x:Name="descriptionBox" HorizontalAlignment="Left" Height="35" Margin="520,312,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontSize="20"/>
+        <Label x:Name="id" Content="Label" HorizontalAlignment="Left" Margin="520,96,0,0" VerticalAlignment="Top" Width="230" FontSize="20"/>
+        <Button x:Name="button" Content="Add Advertisement" HorizontalAlignment="Left" Margin="322,439,0,0" VerticalAlignment="Top" Width="205" FontSize="20" Click="AddAdvertisement_Click"/>
+
+    </Grid>
+</Window>

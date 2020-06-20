@@ -1,0 +1,30 @@
+﻿<Window x:Class="UnderTheSea.View.EditTicket"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UnderTheSea.View"
+        mc:Ignorable="d"
+        Title="EditTicket" Loaded="Window_Loaded" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+
+        </Grid.ColumnDefinitions>
+        <Label x:Name="label" Content="Ticket Type" HorizontalAlignment="Left" Margin="22.5,78,0,0" VerticalAlignment="Top" FontSize="40" Grid.Column="2"/>
+        <Label x:Name="label_Copy" Content="Ticket Price" HorizontalAlignment="Left" Margin="22.5,146,0,0" VerticalAlignment="Top" FontSize="40" Grid.Column="2"/>
+        <Label x:Name="label_Copy1" Content="Ticket Date" HorizontalAlignment="Left" Margin="22.5,214,0,0" VerticalAlignment="Top" FontSize="40" Grid.Column="2"/>
+        <Label x:Name="label_Copy2" Content="Ticket ID" HorizontalAlignment="Left" Margin="22.5,10,0,0" VerticalAlignment="Top" FontSize="40" Grid.Column="2"/>
+        <Label x:Name="label_Copy3" Content="Ticket Status" HorizontalAlignment="Left" Margin="22.5,277,0,0" VerticalAlignment="Top" FontSize="40" Grid.Column="2"/>
+        <Button x:Name="updateBtn" Content="Update Ticket" HorizontalAlignment="Left" Margin="334.5,397,0,0" VerticalAlignment="Top" Width="278" Click="updateTIcket" FontSize="40" Grid.Column="2"/>
+        <Label x:Name="id" Content="Label" HorizontalAlignment="Left" Margin="408.5,13,0,0" VerticalAlignment="Top" FontSize="40" Width="254" Grid.Column="2"/>
+        <Label x:Name="price" Content="Label" HorizontalAlignment="Left" Margin="408.5,146,0,0" VerticalAlignment="Top" FontSize="40" Width="254" Grid.Column="2"/>
+        <Label x:Name="date" Content="Label" HorizontalAlignment="Left" Margin="408.5,214,0,0" VerticalAlignment="Top" FontSize="40" Width="254" Grid.Column="2"/>
+        <Label x:Name="status" Content="Label" HorizontalAlignment="Left" Margin="408.5,277,0,0" VerticalAlignment="Top" FontSize="40" Width="254" Grid.Column="2"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="408,81,0,0" VerticalAlignment="Top" Width="342" Height="60" SelectionChanged="comboBox_SelectionChanged" SelectedIndex="0" FontSize="40">
+            <ComboBoxItem Content="Kid" FontSize="40"/>
+            <ComboBoxItem Content="Adult" FontSize="40"/>
+            <ComboBoxItem Content="Elder" FontSize="40"/>
+        </ComboBox>
+
+    </Grid>
+</Window>

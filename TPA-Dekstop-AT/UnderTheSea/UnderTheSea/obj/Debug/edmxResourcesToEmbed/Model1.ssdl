@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Advertisement">
+    <Key>
+      <PropertyRef Name="AdvertisementID" />
+    </Key>
+    <Property Name="AdvertisementID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdvertisementName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AdvertisementDescription" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AttractionRequest">
+    <Key>
+      <PropertyRef Name="RequestID" />
+    </Key>
+    <Property Name="RequestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="From" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="To" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Message" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PlanDetails" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ConstructionRequest">
+    <Key>
+      <PropertyRef Name="RequestID" />
+    </Key>
+    <Property Name="RequestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="From" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="To" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Message" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Details" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="CustomerIdentificationNumber" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="CustomerIdentificationType" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CustomerDOB" Type="date" />
+    <Property Name="CustomerNationality" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="CustomerPhone" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="CustomerGender" Type="char" MaxLength="6" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="EmployeeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmployeeAddress" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmployeeGender" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="EmployeeSalary" Type="int" Nullable="false" />
+    <Property Name="EmployeePosition" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="EmployeePassword" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="EmployeeStatus" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeeDischargeRequest">
+    <Key>
+      <PropertyRef Name="RequestID" />
+    </Key>
+    <Property Name="RequestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="From" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="To" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Message" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Evidence" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FundRequest">
+    <Key>
+      <PropertyRef Name="RequestID" />
+    </Key>
+    <Property Name="RequestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="From" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="To" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Message" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Amount" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HouseKeepingSchedule">
+    <Key>
+      <PropertyRef Name="ScheduleID" />
+    </Key>
+    <Property Name="ScheduleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ScheduleType" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ScheduleDate" Type="date" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Details" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="RoomID" Type="int" />
+  </EntityType>
+  <EntityType Name="Ingredient">
+    <Key>
+      <PropertyRef Name="IngredientID" />
+    </Key>
+    <Property Name="IngredientID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IngredientName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IngredientStock" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LeaveRequest">
+    <Key>
+      <PropertyRef Name="RequestID" />
+    </Key>
+    <Property Name="RequestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="From" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="To" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Message" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="StartDate" Type="date" Nullable="false" />
+    <Property Name="EndDate" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MaintenanceSchedule">
+    <Key>
+      <PropertyRef Name="ScheduleID" />
+    </Key>
+    <Property Name="ScheduleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ScheduleType" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ScheduleDate" Type="date" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Details" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="ActivityID" Type="int" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="MenuID" />
+    </Key>
+    <Property Name="MenuID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MenuName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="MenuPrice" Type="int" Nullable="false" />
+    <Property Name="MenuDescription" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="MenuStock" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="OrderID" />
+      <PropertyRef Name="MenuID" />
+    </Key>
+    <Property Name="OrderID" Type="int" Nullable="false" />
+    <Property Name="MenuID" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrderHeader">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderType" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TableID" Type="int" />
+    <Property Name="PeopleCount" Type="int" Nullable="false" />
+    <Property Name="OrderStatus" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Parade">
+    <Key>
+      <PropertyRef Name="ActivityID" />
+    </Key>
+    <Property Name="ActivityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ActivityType" Type="varchar" MaxLength="10" />
+    <Property Name="ActivityName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="ActivityDuration" Type="int" Nullable="false" />
+    <Property Name="ActivityDescription" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="PeopleCount" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PurchaseRequest">
+    <Key>
+      <PropertyRef Name="RequestID" />
+    </Key>
+    <Property Name="RequestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="From" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="To" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Message" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Details" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ride">
+    <Key>
+      <PropertyRef Name="ActivityID" />
+    </Key>
+    <Property Name="ActivityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ActivityType" Type="varchar" MaxLength="10" />
+    <Property Name="ActivityName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="ActivityDuration" Type="int" Nullable="false" />
+    <Property Name="ActivityDescription" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MinHeight" Type="int" Nullable="false" />
+    <Property Name="MinAge" Type="int" Nullable="false" />
+    <Property Name="Restriction" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Room">
+    <Key>
+      <PropertyRef Name="RoomID" />
+    </Key>
+    <Property Name="RoomID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoomType" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RoomPrice" Type="int" Nullable="false" />
+    <Property Name="RoomCapacity" Type="int" Nullable="false" />
+    <Property Name="RoomCondition" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RoomStatus" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Table">
+    <Key>
+      <PropertyRef Name="TableID" />
+    </Key>
+    <Property Name="TableID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TableCapacity" Type="int" Nullable="false" />
+    <Property Name="TableStatus" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ticket">
+    <Key>
+      <PropertyRef Name="TicketID" />
+    </Key>
+    <Property Name="TicketID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TicketType" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TicketPrice" Type="int" Nullable="false" />
+    <Property Name="TicketDate" Type="date" />
+    <Property Name="TicketStatus" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WorkPerformance">
+    <Key>
+      <PropertyRef Name="WorkPerformanceID" />
+    </Key>
+    <Property Name="WorkPerformanceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" />
+    <Property Name="PerformanceScore" Type="int" Nullable="false" />
+    <Property Name="Details" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__HouseKeep__RoomI__59063A47">
+    <End Role="Room" Type="Self.Room" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HouseKeepingSchedule" Type="Self.HouseKeepingSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="RoomID" />
+      </Principal>
+      <Dependent Role="HouseKeepingSchedule">
+        <PropertyRef Name="RoomID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Maintenan__Activ__5629CD9C">
+    <End Role="Ride" Type="Self.Ride" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="MaintenanceSchedule" Type="Self.MaintenanceSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ride">
+        <PropertyRef Name="ActivityID" />
+      </Principal>
+      <Dependent Role="MaintenanceSchedule">
+        <PropertyRef Name="ActivityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrderDeta__MenuI__68487DD7">
+    <End Role="Menu" Type="Self.Menu" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="MenuID" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="MenuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrderDeta__Order__6754599E">
+    <End Role="OrderHeader" Type="Self.OrderHeader" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrderHeader">
+        <PropertyRef Name="OrderID" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrderHead__Table__4222D4EF">
+    <End Role="Table" Type="Self.Table" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="OrderHeader" Type="Self.OrderHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Table">
+        <PropertyRef Name="TableID" />
+      </Principal>
+      <Dependent Role="OrderHeader">
+        <PropertyRef Name="TableID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__WorkPerfo__Emplo__6B24EA82">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WorkPerformance" Type="Self.WorkPerformance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="WorkPerformance">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="Advertisement" EntityType="Self.Advertisement" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AttractionRequest" EntityType="Self.AttractionRequest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ConstructionRequest" EntityType="Self.ConstructionRequest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeDischargeRequest" EntityType="Self.EmployeeDischargeRequest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FundRequest" EntityType="Self.FundRequest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HouseKeepingSchedule" EntityType="Self.HouseKeepingSchedule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ingredient" EntityType="Self.Ingredient" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LeaveRequest" EntityType="Self.LeaveRequest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MaintenanceSchedule" EntityType="Self.MaintenanceSchedule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Menu" EntityType="Self.Menu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrderDetail" EntityType="Self.OrderDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrderHeader" EntityType="Self.OrderHeader" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Parade" EntityType="Self.Parade" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PurchaseRequest" EntityType="Self.PurchaseRequest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ride" EntityType="Self.Ride" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Room" EntityType="Self.Room" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ticket" EntityType="Self.Ticket" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkPerformance" EntityType="Self.WorkPerformance" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__HouseKeep__RoomI__59063A47" Association="Self.FK__HouseKeep__RoomI__59063A47">
+      <End Role="Room" EntitySet="Room" />
+      <End Role="HouseKeepingSchedule" EntitySet="HouseKeepingSchedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Maintenan__Activ__5629CD9C" Association="Self.FK__Maintenan__Activ__5629CD9C">
+      <End Role="Ride" EntitySet="Ride" />
+      <End Role="MaintenanceSchedule" EntitySet="MaintenanceSchedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrderDeta__MenuI__68487DD7" Association="Self.FK__OrderDeta__MenuI__68487DD7">
+      <End Role="Menu" EntitySet="Menu" />
+      <End Role="OrderDetail" EntitySet="OrderDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrderDeta__Order__6754599E" Association="Self.FK__OrderDeta__Order__6754599E">
+      <End Role="OrderHeader" EntitySet="OrderHeader" />
+      <End Role="OrderDetail" EntitySet="OrderDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrderHead__Table__4222D4EF" Association="Self.FK__OrderHead__Table__4222D4EF">
+      <End Role="Table" EntitySet="Table" />
+      <End Role="OrderHeader" EntitySet="OrderHeader" />
+    </AssociationSet>
+    <AssociationSet Name="FK__WorkPerfo__Emplo__6B24EA82" Association="Self.FK__WorkPerfo__Emplo__6B24EA82">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="WorkPerformance" EntitySet="WorkPerformance" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

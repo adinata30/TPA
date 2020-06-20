@@ -1,0 +1,35 @@
+﻿<Window x:Class="UnderTheSea.View.EditRide"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UnderTheSea.View"
+        mc:Ignorable="d"
+        Title="EditRide"  Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="416*"/>
+            <RowDefinition Height="89*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="label" Content="Ride ID : " HorizontalAlignment="Left" Margin="76,40,0,0" VerticalAlignment="Top" Height="38" Width="108" FontSize="20"/>
+        <Label x:Name="label_Copy" Content="Ride Type : " HorizontalAlignment="Left" Margin="76,80,0,0" VerticalAlignment="Top" Height="38" Width="108" FontSize="20"/>
+        <Label x:Name="label_Copy1" Content="Ride Name : " HorizontalAlignment="Left" Margin="76,120,0,0" VerticalAlignment="Top" Height="38" Width="130" FontSize="20"/>
+        <Label x:Name="label_Copy2" Content="Ride Duration : " HorizontalAlignment="Left" Margin="76,160,0,0" VerticalAlignment="Top" Height="38" Width="166" FontSize="20"/>
+        <Label x:Name="label_Copy3" Content="Ride Description : " HorizontalAlignment="Left" Margin="76,200,0,0" VerticalAlignment="Top" Height="38" Width="166" FontSize="20"/>
+        <Label x:Name="label_Copy4" Content="Ride Status : " HorizontalAlignment="Left" Margin="76,240,0,0" VerticalAlignment="Top" Height="38" Width="196" FontSize="20"/>
+        <Label x:Name="label_Copy5" Content="Ride MinHeight : " HorizontalAlignment="Left" Margin="76,280,0,0" VerticalAlignment="Top" Height="38" Width="234" FontSize="20"/>
+        <Label x:Name="label_Copy6" Content="Ride MinAge : " HorizontalAlignment="Left" Margin="76,320,0,0" VerticalAlignment="Top" Height="38" Width="166" FontSize="20"/>
+        <Label x:Name="label_Copy7" Content="Ride Restriction : " HorizontalAlignment="Left" Margin="76,360,0,0" VerticalAlignment="Top" Height="38" Width="196" FontSize="20"/>
+        <Label x:Name="id" Content="Ride ID : " HorizontalAlignment="Left" Margin="600,40,0,0" VerticalAlignment="Top" Height="38" Width="108" FontSize="20"/>
+        <Label x:Name="type" Content="Ride" HorizontalAlignment="Left" Margin="600,78,0,0" VerticalAlignment="Top" Height="38" Width="108" FontSize="20"/>
+        <TextBox x:Name="status" Text="Active" HorizontalAlignment="Left" Margin="588,246,0,0" VerticalAlignment="Top" Height="25" Width="120" FontSize="20"/>
+        <TextBox x:Name="nameBox" HorizontalAlignment="Left" Height="26" Margin="588,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20"/>
+        <TextBox x:Name="durationBox" HorizontalAlignment="Left" Height="26" Margin="588,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20"/>
+        <TextBox x:Name="descriptionBox" HorizontalAlignment="Left" Height="26" Margin="588,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20"/>
+        <TextBox x:Name="heightBox" HorizontalAlignment="Left" Height="26" Margin="588,283,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20"/>
+        <TextBox x:Name="AgeBox" HorizontalAlignment="Left" Height="26" Margin="588,327,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20"/>
+        <TextBox x:Name="RestrictionBox" HorizontalAlignment="Left" Height="26" Margin="588,369,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="20"/>
+        <Button x:Name="button" Content="Update" HorizontalAlignment="Left" Margin="630,30.5,0,0" VerticalAlignment="Top" Width="76" FontSize="20" Click="UpdateRide_Click" Grid.Row="1"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,14 @@
+﻿<Window x:Class="UnderTheSea.View.RideAndAttraction"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UnderTheSea.View"
+        mc:Ignorable="d"
+        Title="Ride And Attraction" >
+    <Grid>
+        <Button x:Name="manageRideBtn" Content="Manage Ride" HorizontalAlignment="Left" Margin="293,100,0,0" VerticalAlignment="Top" Width="196" FontSize="20" Loaded="ManageRide_Click" Click="manageRideBtn_Click"/>
+        <Button x:Name="manageParadeBtn" Content="Manage Parade" HorizontalAlignment="Left" Margin="293,173,0,0" VerticalAlignment="Top" Width="196" FontSize="20" Loaded="ManageParade_Click" Click="manageParadeBtn_Click"/>
+
+    </Grid>
+</Window>
